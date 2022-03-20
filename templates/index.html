@@ -1,0 +1,24 @@
+<html>
+    <body>
+            <h1>Predicting Bankruptcy</h1>
+            <h2>Feature selection </h2>
+            <p>We have 64 features to predict bankruptcy in the given data set. </p>
+            <p>Using a correlation matrix (excludsing the class label), we exclude features with >0.9 correlation </p>
+            <p>The number of features dropped from 64 to just 38 </p>
+            <p>We train the model with the 38 features:</p> 
+            <p>Attr1, Attr2, Attr3, Attr4, Attr5, Attr8, Attr9, Attr11, Attr12, Attr13, Attr15, Attr16, Attr19, Attr20, Attr21, Attr24, Attr27, Attr28, Attr29, Attr30, Attr32, Attr33, Attr34, Attr36, Attr37, Attr40, Attr41, Attr45, Attr50, Attr51, Attr53, Attr55, Attr57, Attr58, Attr59, Attr60, Attr61, Attr64</p>
+            <h2>Model training</h2>
+            <p>Please select the model below to look at their accuracy</p>
+            <form action="/" method="post">
+                <select name= "model" method="post" action="/">
+                    {% for model in models %}
+                    <option value= "{{model}}" SELECTED>{{model}}</option>"
+                    {% endfor %}
+                </select>
+                <p><input type = "submit" value = "Enter" </p>
+            </form>
+            <p>{{result1}}</p>
+
+
+    </body>
+</html> 
